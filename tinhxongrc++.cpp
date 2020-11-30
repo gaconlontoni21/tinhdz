@@ -3,8 +3,8 @@
 using namespace std;
 int main(){
 	int n;
-	int a = -1;
-	int b = -1;
+	int a, b;
+	a = b = -1;
 	cout << "Nhap phan tu cua mang: ";
 	cin >> n;
 	int mangchan[n];

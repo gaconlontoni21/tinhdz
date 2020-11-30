@@ -1,8 +1,8 @@
 #include <stdio.h>
 int main(){
 	int n;
-	int a = -1;
-	int b = -1;
+	int a, b;
+	a = b = -1;
 	printf("Nhap phan tu cua mang: ");
 	scanf("%d", &n);
 	int mangchan[n];
