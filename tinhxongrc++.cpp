@@ -23,7 +23,7 @@ int main(){
 			mangchan[b] = arr[i];
 		}
 	}
-	for (int i = 0; i <= n; i++){
+	for (int i = 0; i <= b; i++){
 		mangle[a+1+i] = mangchan[i];
 	}
 	for (int i = 0; i < n; i++){
