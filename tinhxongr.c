@@ -5,8 +5,8 @@ int main(){
 	a = b = -1;
 	printf("Nhap phan tu cua mang: ");
 	scanf("%d", &n);
-	int mangchan[n];
-	int mangle[n];
+	int* mangchan = (int*)malloc(n*sizeof(int));
+	int* mangle = (int*)malloc(n*sizeof(int));
 	int arr[n];
 	for (int i = 0; i < n; i++){
 		printf("Nhap arr[%d]: ", i);
@@ -27,5 +27,6 @@ int main(){
 	for (int i = 0; i < n; i++){
 		printf("Arr[%d]: %d\t", i, mangle[i]);	
 	}
-	
+	free(mangchan);
+	free(mangle);
 }
