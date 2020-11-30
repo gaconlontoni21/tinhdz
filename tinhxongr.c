@@ -2,13 +2,13 @@
 #include <string.h>
 int main(){
 	int n;
-	printf("Nhap phan tu cua mang: ");
-	scanf("%d", &n);
-	int arr[n];
 	int a = -1;
 	int b = -1;
 	int mangchan[n];
 	int mangle[n];
+	printf("Nhap phan tu cua mang: ");
+	scanf("%d", &n);
+	int arr[n];
 	for (int i = 0; i < n; i++){
 		printf("Nhap arr[%d]: ", i);
 		scanf("%d", &arr[i]);
