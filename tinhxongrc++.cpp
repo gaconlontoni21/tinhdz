@@ -3,12 +3,12 @@
 using namespace std;
 int main(){
 	int n;
-	cout << "Nhap phan tu cua mang: ";
 	int a = -1;
 	int b = -1;
+	cout << "Nhap phan tu cua mang: ";
+	cin >> n;
 	int mangchan[n];
 	int mangle[n];
-	cin >> n;
 	int arr[n];
 	for (int i = 0; i < n; i++){
 		cout << "Nhap phan tu arr[" << i << "]: ";
