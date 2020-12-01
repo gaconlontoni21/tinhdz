@@ -29,7 +29,7 @@ void cau1(){
 		printf("-");
 	}
 	for (int j = 0; j < size; j++){
-		printf("%d. Cau %d (Nhap %d) - %s\n", j + 1, j + 2, j + 2, arr[j]);
+		printf("%d. Cau %d (Nhap %d) - %s\n", j + 1, j + 2, j + 1, arr[j]);
 	}
 	// giai phong bo nho
 	free(claz);
