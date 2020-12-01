@@ -1,14 +1,20 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
+#define malloc() (char*)malloc(30*sizeof(char*))
+
+typedef struct{
+	char name[30];
+	char color[30];
+} Struct;
 
 void cau1(){
 	// Cap phat bo nho dong
-	char * claz = (char*)malloc(30*sizeof(char*));
-	char * MSSV = (char*)malloc(30*sizeof(char*));
-	char * name = (char*)malloc(30*sizeof(char*));
+	char * claz = malloc();
+	char * MSSV = malloc();
+	char * name = malloc();
 	char * length = "Mac Dinh Cau 1";
-	char* arr[] = {"MANG", "CAU TRUC", "CHUOI", "DE QUY"};
+	char * arr[] = {"MANG", "CAU TRUC", "CHUOI", "DE QUY"};
 	int size = sizeof(arr)/sizeof(arr[0]);
 	for (int i = 0; i < 2; i++){
 		for (int j = 0; j < 33; j++){
@@ -49,17 +55,55 @@ void cau2(){
 	printf("Tong cac gia tri trong mang la: %d", sum);
 }
 
-void nhapstt(){
+void cau3(){
 	int n;
-	int arr[5] = {1, 2 ,3 , 4 ,5};
-	int size = sizeof(arr)/sizeof(arr[0]);
-	printf("\nChon chuong trinh de chay (nhap so thu tu): ");
+	printf("Nhap so luong laptop: ");
 	scanf("%d", &n);
+	Struct laptop[n];
+	for (int i = 0; i < n; i++){
+		fflush(stdin);
+		printf("\nNhap ten cua laptop %d: ", i+1);
+		gets(laptop[i].name);
+		printf("Nhap mau cua laptop %d: ", i+1);
+		gets(laptop[i].color);
+	}
+	system("cls");
+	for (int i = 0; i < n; i++){
+		printf("\nLaptop thu %d: ", i+1);
+		printf("\nTen: %s", laptop[i].name);
+		printf("\nMau: %s", laptop[i].color);
+	}
+}
+
+void nhapstt(){
+	int n;	
+	do{
+		printf("\nChon chuong trinh de chay (nhap so thu tu): ");
+		scanf("%d", &n);
+	}while(n > 4 || n < 0);
 	switch (n){
-		case 2: {
+		case 0:{
+			cau3();
+			break;
+		}
+		case 1:{
 			cau2();
 			break;
 		}
+		case 2:{
+			cau3();
+			break;
+		}
+//		case 3:{
+//			cau4();
+//			break;
+//		}
+//		case 4:{
+//			cau5();
+//			break;
+//		}
+		
+		
 	}
 }
 
