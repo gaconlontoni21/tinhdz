@@ -29,4 +29,5 @@ int main(){
 	}
 	free(mangchan);
 	free(mangle);
+	//
 }
