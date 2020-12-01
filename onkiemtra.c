@@ -19,7 +19,7 @@ void cau1(){
 		}
 		printf("%s", length);
 	}
-	printf("Lop: ");
+	printf("\nLop: ");
 	gets(claz);;
 	printf("MSSV: ");
 	gets(MSSV);
@@ -29,7 +29,7 @@ void cau1(){
 		printf("-");
 	}
 	for (int j = 0; j < size; j++){
-		printf("%d. Cau %d (Nhap %d) - %s\n", j + 1, j + 2, j + 1, arr[j]);
+		printf("\n%d. Cau %d (Nhap %d) - %s\n", j + 1, j + 2, j + 1, arr[j]);
 	}
 	// giai phong bo nho
 	free(claz);
@@ -37,15 +37,34 @@ void cau1(){
 	free(name);
 }
 
-//void nhapstt(){
-//	int n;
-//	int arr[5] = {1, 2 ,3 , 4 ,5};
-//	int size = sizeof(arr)/sizeof(arr[0]);
-//	printf("Chon chuong trinh de chay (nhap so thu tu): ");
-//	scanf("%d", &n);
-//}
+void cau2(){
+	int n;
+	int sum = 0;
+	printf("Nhap so phan tu: ");
+	scanf("%d", &n);
+	int arr[n];
+	for (int i = 0; i < n; i++){
+		sum += arr[i];
+	}
+	printf("Tong cac gia tri trong mang la: %d", sum);
+}
+
+void nhapstt(){
+	int n;
+	int arr[5] = {1, 2 ,3 , 4 ,5};
+	int size = sizeof(arr)/sizeof(arr[0]);
+	printf("\nChon chuong trinh de chay (nhap so thu tu): ");
+	scanf("%d", &n);
+	switch (n){
+		case 2: {
+			cau2();
+			break;
+		}
+	}
+}
 
 int main(){
 	cau1();
+	nhapstt();
 	getch();
 }
