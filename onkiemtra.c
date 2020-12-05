@@ -27,9 +27,9 @@ void cau1(){
 	}
 	printf("\nLop: ");
 	gets(claz);;
-	printf("MSSV: ");
+	printf("\nMSSV: ");
 	gets(MSSV);
-	printf("Ho & Ten: ");
+	printf("\nHo & Ten: ");
 	gets(name);
 	for (int i = 0; i < 33*2+strlen(length); i++){
 		printf("-");
@@ -55,8 +55,16 @@ void cau2(){
 	printf("Tong cac gia tri trong mang la: %d", sum);
 }
 
+void getUC(Struct laptop){
+	
+}
+
+
+
 void cau3(){
 	int n;
+	char string[20];
+	char getStrInput[10];
 	printf("Nhap so luong laptop: ");
 	scanf("%d", &n);
 	Struct laptop[n];
@@ -66,12 +74,22 @@ void cau3(){
 		gets(laptop[i].name);
 		printf("Nhap mau cua laptop %d: ", i+1);
 		gets(laptop[i].color);
+		strcpy(getStrInput, laptop[i].color);
+		strlwr(getStrInput);
 	}
-	system("cls");
+		
+	printf("\nDanh sach laptop: ");
 	for (int i = 0; i < n; i++){
 		printf("\nLaptop thu %d: ", i+1);
 		printf("\nTen: %s", laptop[i].name);
 		printf("\nMau: %s", laptop[i].color);
+	}
+	printf("\nDanh sach laptop co mau %s: ", laptop[i].color);
+	for (int i = 0; i < n; i++){
+		if (strcmp(strlwr(laptop[i].color), getStrInput) == 0){
+			printf("\nLaptop %d: ",  i +1);
+			printf("\Ten: %s", laptop[i].name);	
+		}
 	}
 }
 
